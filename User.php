@@ -2,12 +2,11 @@
 class User {
   private $name;
   private $surname;
-  private $discount = 0;
+  protected $discount = 0;
 
-  public function __construct($_name,$_surname,$_discount){
-    $this->$name =$_name;
-    $this->$surname =$_surname;
-    $this->$discount =$_discount;
+  public function __construct($_name,$_surname){
+    $this->name = $_name;
+    $this->surname = $_surname;
   }
 
   // SETTER
@@ -16,9 +15,6 @@ class User {
   }
   public function setSurname($_surname){
     $this->surname = $_surname;
-  }
-  public function setDiscount($_discount){
-    $this->discount = $_discount;
   }
 
   // GETTER
